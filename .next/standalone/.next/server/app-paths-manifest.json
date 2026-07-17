@@ -1,14 +1,14 @@
 {
-  "/sitemap.xml/route": "app/sitemap.xml/route.js",
   "/_not-found/page": "app/_not-found/page.js",
+  "/sitemap.xml/route": "app/sitemap.xml/route.js",
   "/robots.txt/route": "app/robots.txt/route.js",
-  "/login/page": "app/login/page.js",
   "/my-properties/page": "app/my-properties/page.js",
-  "/properties/create/page": "app/properties/create/page.js",
-  "/properties/[id]/page": "app/properties/[id]/page.js",
   "/properties/[id]/edit/page": "app/properties/[id]/edit/page.js",
-  "/page": "app/page.js",
   "/profile/page": "app/profile/page.js",
-  "/register/page": "app/register/page.js",
-  "/properties/page": "app/properties/page.js"
+  "/properties/create/page": "app/properties/create/page.js",
+  "/login/page": "app/login/page.js",
+  "/properties/[id]/page": "app/properties/[id]/page.js",
+  "/page": "app/page.js",
+  "/properties/page": "app/properties/page.js",
+  "/register/page": "app/register/page.js"
 }
