@@ -1,0 +1,14 @@
+{
+  "/sitemap.xml/route": "/sitemap.xml",
+  "/_not-found/page": "/_not-found",
+  "/robots.txt/route": "/robots.txt",
+  "/login/page": "/login",
+  "/my-properties/page": "/my-properties",
+  "/properties/create/page": "/properties/create",
+  "/properties/[id]/page": "/properties/[id]",
+  "/properties/[id]/edit/page": "/properties/[id]/edit",
+  "/page": "/",
+  "/profile/page": "/profile",
+  "/register/page": "/register",
+  "/properties/page": "/properties"
+}
