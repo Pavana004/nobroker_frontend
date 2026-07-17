@@ -1,7 +1,9 @@
 {
   "/login/page": "app/login/page.js",
   "/properties/page": "app/properties/page.js",
+  "/properties/create/page": "app/properties/create/page.js",
   "/profile/page": "app/profile/page.js",
-  "/my-properties/page": "app/my-properties/page.js",
-  "/properties/create/page": "app/properties/create/page.js"
+  "/register/page": "app/register/page.js",
+  "/_not-found/page": "app/_not-found/page.js",
+  "/my-properties/page": "app/my-properties/page.js"
 }
