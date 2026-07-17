@@ -1,0 +1,78 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    @apply scroll-smooth;
+  }
+
+  body {
+    @apply bg-paper text-ink font-body antialiased;
+  }
+
+  h1,
+  h2,
+  h3 {
+    @apply font-display;
+  }
+
+  /* Visible keyboard focus everywhere — never suppressed. */
+  :focus-visible {
+    outline: 2px solid theme("colors.teal.DEFAULT");
+    outline-offset: 2px;
+  }
+
+  ::selection {
+    background: theme("colors.brass");
+    color: theme("colors.paper");
+  }
+}
+
+@layer components {
+  /* Signature element: blueprint corner brackets. Four small L-shaped
+     marks drawn with box-shadow-free borders, replacing the
+     rounded-card + drop-shadow default. Applied via .bracket-frame. */
+  .bracket-frame {
+    position: relative;
+  }
+  .bracket-frame::before,
+  .bracket-frame::after,
+  .bracket-frame > .bracket-tl,
+  .bracket-frame > .bracket-br {
+    content: "";
+    position: absolute;
+    width: 14px;
+    height: 14px;
+    transition: all 180ms ease;
+    pointer-events: none;
+  }
+  .bracket-frame::before {
+    top: -1px;
+    left: -1px;
+    border-top: 2px solid theme("colors.brass");
+    border-left: 2px solid theme("colors.brass");
+  }
+  .bracket-frame::after {
+    bottom: -1px;
+    right: -1px;
+    border-bottom: 2px solid theme("colors.brass");
+    border-right: 2px solid theme("colors.brass");
+  }
+  .bracket-frame:hover::before {
+    top: -4px;
+    left: -4px;
+  }
+  .bracket-frame:hover::after {
+    bottom: -4px;
+    right: -4px;
+  }
+
+  .container-page {
+    @apply mx-auto w-full max-w-6xl px-4 sm:px-6 lg:px-8;
+  }
+
+  .ledger-value {
+    @apply font-mono tabular-nums;
+  }
+}
