@@ -222,8 +222,8 @@ function EditPropertyForm({ id }: { id: string }) {
 export default function EditPropertyPage() {
   const params = useParams<{ id: string }>();
   return (
-    // <RequireAuth>
+    <RequireAuth>
     <EditPropertyForm id={params.id} />
-    // </RequireAuth>
+    </RequireAuth>
   );
 }
