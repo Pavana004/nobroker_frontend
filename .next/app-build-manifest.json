@@ -19,6 +19,7 @@
     "/page": [
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
+      "static/css/app/page.css",
       "static/chunks/app/page.js"
     ],
     "/_not-found/page": [
@@ -26,15 +27,10 @@
       "static/chunks/main-app.js",
       "static/chunks/app/_not-found/page.js"
     ],
-    "/my-properties/page": [
+    "/properties/[id]/page": [
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
-      "static/chunks/app/my-properties/page.js"
-    ],
-    "/properties/create/page": [
-      "static/chunks/webpack.js",
-      "static/chunks/main-app.js",
-      "static/chunks/app/properties/create/page.js"
+      "static/chunks/app/properties/[id]/page.js"
     ]
   }
 }
