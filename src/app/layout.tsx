@@ -29,7 +29,7 @@ const plexMono = IBM_Plex_Mono({
 
 export const metadata: Metadata = {
   title: {
-    default: "Plinth — Find a home directly from owners",
+    default: "Red Sand — Find a home directly from owners",
     template: "RED SAND",
   },
   description:
