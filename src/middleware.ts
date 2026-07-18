@@ -27,10 +27,10 @@ export function middleware(request: NextRequest) {
   const hasRefreshCookie = request.cookies.has("refreshToken");
   console.log("Checking refresh cookie", hasRefreshCookie);
 
-  if (!hasRefreshCookie) {
-    const loginUrl = new URL("/login", request.url);
-    return NextResponse.redirect(loginUrl);
-  }
+  // if (!hasRefreshCookie) {
+  //   const loginUrl = new URL("/login", request.url);
+  //   return NextResponse.redirect(loginUrl);
+  // }
 
   return NextResponse.next();
 }
