@@ -4,36 +4,24 @@
     "/": {
       "files": [
         "server/edge-runtime-webpack.js",
-        "server/src/middleware.js"
+        "server/middleware.js"
       ],
-      "name": "src/middleware",
+      "name": "middleware",
       "page": "/",
       "matchers": [
         {
-          "regexp": "^(?:\\/(_next\\/data\\/[^/]{1,}))?\\/my-properties(?:\\/((?:[^\\/#\\?]+?)(?:\\/(?:[^\\/#\\?]+?))*))?(\\.json|\\.rsc|\\.segments\\/.+\\.segment\\.rsc)?[\\/#\\?]?$",
-          "originalSource": "/my-properties/:path*"
-        },
-        {
-          "regexp": "^(?:\\/(_next\\/data\\/[^/]{1,}))?\\/profile(?:\\/((?:[^\\/#\\?]+?)(?:\\/(?:[^\\/#\\?]+?))*))?(\\.json|\\.rsc|\\.segments\\/.+\\.segment\\.rsc)?[\\/#\\?]?$",
-          "originalSource": "/profile/:path*"
-        },
-        {
-          "regexp": "^(?:\\/(_next\\/data\\/[^/]{1,}))?\\/properties\\/create(\\.json|\\.rsc|\\.segments\\/.+\\.segment\\.rsc)?[\\/#\\?]?$",
-          "originalSource": "/properties/create"
-        },
-        {
-          "regexp": "^(?:\\/(_next\\/data\\/[^/]{1,}))?\\/properties(?:\\/([^\\/#\\?]+?))\\/edit(\\.json|\\.rsc|\\.segments\\/.+\\.segment\\.rsc)?[\\/#\\?]?$",
-          "originalSource": "/properties/:id/edit"
+          "regexp": "^/.*$",
+          "originalSource": "/:path*"
         }
       ],
       "wasm": [],
       "assets": [],
       "env": {
-        "__NEXT_BUILD_ID": "kp5VAGV9_w6PXwKemVBY_",
+        "__NEXT_BUILD_ID": "development",
         "NEXT_SERVER_ACTIONS_ENCRYPTION_KEY": "wkCvmhUC21JFQwk4rv8HW9s8M63a2Vh191XMqhLoScI=",
-        "__NEXT_PREVIEW_MODE_ID": "a0a49efd0a10be36a41f7f5573dcbb35",
-        "__NEXT_PREVIEW_MODE_SIGNING_KEY": "b6b6357bfd805a659bf6b71faa0d94888aec83c22b0613c9e2fa95629a21070e",
-        "__NEXT_PREVIEW_MODE_ENCRYPTION_KEY": "17cee0282c63900b2a3ab1fe55fd62d824f967ea786660e06c4279fbee7b4930"
+        "__NEXT_PREVIEW_MODE_ID": "8b1aa114007215cc00b34988a8f55071",
+        "__NEXT_PREVIEW_MODE_SIGNING_KEY": "084bd082f18d44b0a86d237e9fec9be13507216f576de20d2af0dc2a98a982a0",
+        "__NEXT_PREVIEW_MODE_ENCRYPTION_KEY": "f0b79be88e7eaf43e1172eb171d2bb05fe5065129fb02c904848d91c2f6aa29e"
       }
     }
   },
