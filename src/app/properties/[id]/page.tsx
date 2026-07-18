@@ -18,9 +18,9 @@ async function getProperty(id: string) {
   return serverFetch<Property>(`/properties/${id}`);
 }
 
-// Dynamic metadata per docs/SEO_STRATEGY.md — unique title/description
-// per listing, driven directly from the property record.
-export async function generateMetadata({ params }: PageProps): Promise<Metadata> {
+export async function generateMetadata({
+  params,
+}: PageProps): Promise<Metadata> {
   const { id } = await params;
   const property = await getProperty(id);
   if (!property) return { title: "Listing not found" };
@@ -65,7 +65,10 @@ export default async function PropertyDetailPage({ params }: PageProps) {
       "@type": "Offer",
       price: property.price,
       priceCurrency: "INR",
-      availability: property.status === "ACTIVE" ? "https://schema.org/InStock" : "https://schema.org/OutOfStock",
+      availability:
+        property.status === "ACTIVE"
+          ? "https://schema.org/InStock"
+          : "https://schema.org/OutOfStock",
     },
     address: {
       "@type": "PostalAddress",
@@ -77,7 +80,10 @@ export default async function PropertyDetailPage({ params }: PageProps) {
   return (
     <div className="container-page py-10">
       {/* eslint-disable-next-line react/no-danger */}
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
 
       <div className="grid grid-cols-1 gap-10 lg:grid-cols-3">
         <div className="space-y-6 lg:col-span-2">
@@ -85,16 +91,24 @@ export default async function PropertyDetailPage({ params }: PageProps) {
 
           <div className="space-y-3">
             <div className="flex flex-wrap items-center gap-2">
-              <Badge tone="brass">{propertyTypeLabel(property.propertyType)}</Badge>
+              <Badge tone="brass">
+                {propertyTypeLabel(property.propertyType)}
+              </Badge>
               <Badge>{furnishingLabel(property.furnishing)}</Badge>
-              <Badge tone={property.status === "ACTIVE" ? "teal" : "neutral"}>{property.status}</Badge>
+              <Badge tone={property.status === "ACTIVE" ? "teal" : "neutral"}>
+                {property.status}
+              </Badge>
             </div>
-            <h1 className="font-display text-2xl text-ink sm:text-3xl">{property.title}</h1>
+            <h1 className="font-display text-2xl text-ink sm:text-3xl">
+              {property.title}
+            </h1>
             <p className="flex items-center gap-1 text-sm text-ink/60">
-              <MapPin className="h-4 w-4" /> {property.address}, {property.locality}, {property.city}
+              <MapPin className="h-4 w-4" /> {property.address},{" "}
+              {property.locality}, {property.city}
             </p>
             <p className="ledger-value text-2xl text-brick">
-              {formatPriceExact(property.price)} <span className="text-sm font-normal text-ink/50">/month</span>
+              {formatPriceExact(property.price)}{" "}
+              <span className="text-sm font-normal text-ink/50">/month</span>
             </p>
           </div>
 
@@ -115,7 +129,9 @@ export default async function PropertyDetailPage({ params }: PageProps) {
 
           <div>
             <h2 className="mb-2 font-display text-lg text-ink">Description</h2>
-            <p className="whitespace-pre-line text-sm leading-relaxed text-ink/80">{property.description}</p>
+            <p className="whitespace-pre-line text-sm leading-relaxed text-ink/80">
+              {property.description}
+            </p>
           </div>
 
           {property.amenities.length > 0 && (
@@ -129,7 +145,9 @@ export default async function PropertyDetailPage({ params }: PageProps) {
             </div>
           )}
 
-          <p className="text-xs text-ink/40">Listed on {formatDate(property.createdAt)}</p>
+          <p className="text-xs text-ink/40">
+            Listed on {formatDate(property.createdAt)}
+          </p>
         </div>
 
         <div className="space-y-6">
@@ -143,7 +161,9 @@ export default async function PropertyDetailPage({ params }: PageProps) {
 
       {similar && similar.length > 0 && (
         <section className="mt-16">
-          <h2 className="mb-6 font-display text-xl text-ink">Similar properties nearby</h2>
+          <h2 className="mb-6 font-display text-xl text-ink">
+            Similar properties nearby
+          </h2>
           <PropertyGrid properties={similar} isLoading={false} />
         </section>
       )}

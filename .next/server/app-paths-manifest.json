@@ -1,6 +1,5 @@
 {
   "/page": "app/page.js",
-  "/_not-found/page": "app/_not-found/page.js",
-  "/properties/create/page": "app/properties/create/page.js",
-  "/my-properties/page": "app/my-properties/page.js"
+  "/my-properties/page": "app/my-properties/page.js",
+  "/properties/create/page": "app/properties/create/page.js"
 }

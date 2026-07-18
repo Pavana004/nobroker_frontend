@@ -30,7 +30,7 @@ const plexMono = IBM_Plex_Mono({
 export const metadata: Metadata = {
   title: {
     default: "Plinth — Find a home directly from owners",
-    template: "%s | Plinth",
+    template: "RED SAND",
   },
   description:
     "Search verified property listings and connect directly with owners — no brokerage, no middlemen.",
